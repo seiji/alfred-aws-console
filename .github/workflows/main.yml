@@ -1,0 +1,18 @@
+on:
+  create:
+    tags:
+    - v*.*.*
+jobs:
+  release: runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Build
+        run:  zip -r -X "./aws-console.alfredworkflow" . -x ".github" -x ".git" -x "Makefile" -x "items.dhall"
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            aws-console.alfredworkflow
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

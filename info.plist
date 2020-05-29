@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>me.seiji.alfred.aws</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>F9C5D524-F6F0-4EF4-BFC8-759A708D7627</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ECBD7858-52A2-4814-80A6-B5B18CA044DF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Seiji Toyama</string>
+	<key>description</key>
+	<string>AWS Console</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>AWS Console</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>ECBD7858-52A2-4814-80A6-B5B18CA044DF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>fixedorder</key>
+				<false/>
+				<key>items</key>
+				<string>[{"arg":"https://console.aws.amazon.com/athena/home?force#","subtitle":"","title":"Athena"},{"arg":"https://console.aws.amazon.com/billing/home?#/budgets","subtitle":"","title":"Budgets"},{"arg":"https://console.aws.amazon.com/acm/home?#/","subtitle":"","title":"Certificate Manager"},{"arg":"https://console.aws.amazon.com/cloudfront/home?#","subtitle":"","title":"CloudFront"},{"arg":"https://console.aws.amazon.com/cloudtrail/home?#/dashboard","subtitle":"","title":"CloudTrail Dashboard"},{"arg":"https://console.aws.amazon.com/cloudwatch/home#dashboards:","subtitle":"","title":"CloudWatch Dashboards"},{"arg":"https://console.aws.amazon.com/cloudwatch/home?#rules:","subtitle":"","title":"CloudWatch Events Rules"},{"arg":"https://console.aws.amazon.com/cloudwatch/home#logs:","subtitle":"","title":"CloudWatch Logs"},{"arg":"https://console.aws.amazon.com/cloudwatch/home?#metricsV2:","subtitle":"","title":"CloudWatch Metrics"},{"arg":"https://console.aws.amazon.com/cloudwatch/home","subtitle":"","title":"CloudWatch"},{"arg":"https://console.aws.amazon.com/config","subtitle":"","title":"Config"},{"arg":"https://console.aws.amazon.com/ec2/autoscaling/home?#AutoScalingGroups:view=details","subtitle":"","title":"EC2 AutoScalingGroups"},{"arg":"https://console.aws.amazon.com/ec2/#Instances","subtitle":"EC2 Instances","title":"EC2 Instances"},{"arg":"https://console.aws.amazon.com/ec2/autoscaling/home?#LaunchConfigurations:","subtitle":"","title":"EC2 LaunchConfugurations"},{"arg":"https://console.aws.amazon.com/ec2/","subtitle":"EC2 Dashboard","title":"EC2"},{"arg":"https://console.aws.amazon.com/ecr/repositories","subtitle":"","title":"ECR Repositories"},{"arg":"ecs/home?#/clusters","subtitle":"","title":"ECS Clusters"},{"arg":"https://console.aws.amazon.com/ecs/home#/taskDefinitions","subtitle":"","title":"ECS TaskDefinition"},{"arg":"https://console.aws.amazon.com/eks/home#/clusters","subtitle":"","title":"EKS Clusters"},{"arg":"https://console.aws.amazon.com/ec2/v2/home?#LoadBalancers:sort=loadBalancerName","subtitle":"","title":"ELB LoadBalancers"},{"arg":"https://console.aws.amazon.com/ec2/v2/home?#TargetGroups:sort=targetGroupName","subtitle":"","title":"ELB TargetGroups"},{"arg":"https://console.aws.amazon.com/elasticache/home?#","subtitle":"","title":"ElastiCache Dashboard"},{"arg":"https://console.aws.amazon.com/es/home","subtitle":"","title":"Elasticsearch"},{"arg":"https://console.aws.amazon.com/iam/home?#/roles","subtitle":"","title":"IAM Roles"},{"arg":"https://console.aws.amazon.com/iam/home?#/home","subtitle":"","title":"IAM"},{"arg":"https://console.aws.amazon.com/lambda/home?#/functions","subtitle":"","title":"Lambda Functions"},{"arg":"https://console.aws.amazon.com/lambda/home#/discover","subtitle":"","title":"Lambda"},{"arg":"https://console.aws.amazon.com/rds/home#databases:","subtitle":"","title":"RDS databases"},{"arg":"https://console.aws.amazon.com/rds/home","subtitle":"RDS Dashboard","title":"RDS"},{"arg":"https://console.aws.amazon.com/route53/home#hosted-zones:","subtitle":"","title":"Route53 Hosted zones"},{"arg":"https://console.aws.amazon.com/route53/home#","subtitle":"","title":"Route53"},{"arg":"https://console.aws.amazon.com/s3/home","subtitle":"","title":"S3"},{"arg":"https://console.aws.amazon.com/securityhub/home?#/summary","subtitle":"","title":"SecurityHub"},{"arg":"https://console.aws.amazon.com/sns/v3/home?#/dashboard","subtitle":"","title":"SNS Dashboard"},{"arg":"https://console.aws.amazon.com/sns/v3/home#/topics","subtitle":"","title":"SNS Topics"},{"arg":"https://console.aws.amazon.com/systems-manager/managed-instances","subtitle":"","title":"SSM Managed Instances"},{"arg":"https://console.aws.amazon.com/vpc/home?#","subtitle":"","title":"VPC Dashboard"},{"arg":"https://console.aws.amazon.com/vpc/home?#SecurityGroups:sort=tag:Name","subtitle":"","title":"VPC SG"},{"arg":"https://console.aws.amazon.com/vpc/home?#vpcs:sort=VpcId","subtitle":"","title":"VPC"},{"arg":"https://phd.aws.amazon.com/phd/home","subtitle":"","title":"PersonalHealthDashboard"}]</string>
+				<key>keyword</key>
+				<string>aws</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Place aws service</string>
+				<key>title</key>
+				<string>Access aws console</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>F9C5D524-F6F0-4EF4-BFC8-759A708D7627</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>ECBD7858-52A2-4814-80A6-B5B18CA044DF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>70</integer>
+		</dict>
+		<key>F9C5D524-F6F0-4EF4-BFC8-759A708D7627</key>
+		<dict>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>70</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
