@@ -11,9 +11,9 @@ jobs:
       - name: Build
         run:  zip -r -X "./aws-console.alfredworkflow" . -x ".github" -x ".git" -x "Makefile" -x "items.dhall"
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: actions/upload-artifact@v2
         with:
-          files: |
-            aws-console.alfredworkflow
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: aws-console.alfredworkflow
+          path: ./aws-console.alfredworkflow
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
