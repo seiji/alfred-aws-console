@@ -1,19 +1,39 @@
 on:
   create:
     tags:
-    - v*.*.*
+    - v*
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Build
         run:  zip -r -X "./aws-console.alfredworkflow" . -x ".github" -x ".git" -x "Makefile" -x "items.dhall"
-      - name: Release
-        uses: actions/upload-artifact@v2
-        with:
-          name: aws-console.alfredworkflow
-          path: ./aws-console.alfredworkflow
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            tag_name: ${{ github.ref }}
+            release_name: Release ${{ github.ref }}
+            draft: false
+            prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            upload_url: ${{ steps.create_release.outputs.upload_url }}
+            asset_path: ./aws-console.alfredworkflow
+            asset_name: aws-console.alfredworkflow
+            asset_content_type: application/zip
+      # - name: Release
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: aws-console.alfredworkflow
+      #     path: ./aws-console.alfredworkflow
         # env:
         #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
